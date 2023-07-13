@@ -32,11 +32,10 @@ $(function () {
   const hr4 = document.getElementById('hour-16');
   const hr5 = document.getElementById('hour-17');
 
-  const time = new Date();
-  let hours = time.getHours();
-  console.log(hours);
-
     function settimeclass() {
+      const time = new Date();
+      let hours = time.getHours();
+      console.log(hours);
       if (hours < 9) {
         hr9.classList.add('future');
         hr10.classList.add('future');
@@ -46,8 +45,9 @@ $(function () {
         hr2.classList.add('future');
         hr3.classList.add('future');
         hr4.classList.add('future');
-        hr5.classList.add('future')
-      } else if (hours = 9) {
+        hr5.classList.add('future');
+        console.log(8);
+      } else if (hours === 9) {
         hr9.classList.add('present');
         hr10.classList.add('future');
         hr11.classList.add('future');
@@ -56,8 +56,9 @@ $(function () {
         hr2.classList.add('future');
         hr3.classList.add('future');
         hr4.classList.add('future');
-        hr5.classList.add('future')
-      } else if (hours = 10) {
+        hr5.classList.add('future');
+        console.log(9);
+      } else if (hours === 10) {
         hr9.classList.add('past');
         hr10.classList.add('present');
         hr11.classList.add('future');
@@ -66,8 +67,9 @@ $(function () {
         hr2.classList.add('future');
         hr3.classList.add('future');
         hr4.classList.add('future');
-        hr5.classList.add('future')
-      } else if (hours = 11) {
+        hr5.classList.add('future');
+        console.log(10);
+      } else if (hours === 11) {
         hr9.classList.add('past');
         hr10.classList.add('past');
         hr11.classList.add('present');
@@ -76,8 +78,9 @@ $(function () {
         hr2.classList.add('future');
         hr3.classList.add('future');
         hr4.classList.add('future');
-        hr5.classList.add('future')
-      }else if (hours = 12) {
+        hr5.classList.add('future');
+        console.log(11);
+      }else if (hours === 12) {
         hr9.classList.add('past');
         hr10.classList.add('past');
         hr11.classList.add('past');
@@ -86,8 +89,9 @@ $(function () {
         hr2.classList.add('future');
         hr3.classList.add('future');
         hr4.classList.add('future');
-        hr5.classList.add('future')
-      }else if (hours = 13) {
+        hr5.classList.add('future');
+        console.log(12);
+      }else if (hours === 13) {
         hr9.classList.add('past');
         hr10.classList.add('past');
         hr11.classList.add('past');
@@ -96,8 +100,9 @@ $(function () {
         hr2.classList.add('future');
         hr3.classList.add('future');
         hr4.classList.add('future');
-        hr5.classList.add('future')
-      }else if (hours = 14) {
+        hr5.classList.add('future');
+        console.log(13);
+      }else if (hours === 14) {
         hr9.classList.add('past');
         hr10.classList.add('past');
         hr11.classList.add('past');
@@ -106,8 +111,9 @@ $(function () {
         hr2.classList.add('present');
         hr3.classList.add('future');
         hr4.classList.add('future');
-        hr5.classList.add('future')
-      }else if (hours = 15) {
+        hr5.classList.add('future');
+        console.log(14);
+      }else if (hours === 15) {
         hr9.classList.add('past');
         hr10.classList.add('past');
         hr11.classList.add('past');
@@ -116,8 +122,9 @@ $(function () {
         hr2.classList.add('past');
         hr3.classList.add('present');
         hr4.classList.add('future');
-        hr5.classList.add('future')
-      }else if (hours = 16) {
+        hr5.classList.add('future');
+        console.log(15);
+      }else if (hours === 16) {
         hr9.classList.add('past');
         hr10.classList.add('past');
         hr11.classList.add('past');
@@ -126,8 +133,9 @@ $(function () {
         hr2.classList.add('past');
         hr3.classList.add('past');
         hr4.classList.add('present');
-        hr5.classList.add('future')
-      }else if (hours = 16) {
+        hr5.classList.add('future');
+        console.log(16);
+      }else if (hours === 17) {
         hr9.classList.add('past');
         hr10.classList.add('past');
         hr11.classList.add('past');
@@ -136,7 +144,8 @@ $(function () {
         hr2.classList.add('past');
         hr3.classList.add('past');
         hr4.classList.add('past');
-        hr5.classList.add('present')
+        hr5.classList.add('present');
+        console.log(17);
       } else {
         hr9.classList.add('past');
         hr10.classList.add('past');
@@ -146,7 +155,8 @@ $(function () {
         hr2.classList.add('past');
         hr3.classList.add('past');
         hr4.classList.add('past');
-        hr5.classList.add('past')
+        hr5.classList.add('past');
+        console.log(18);
       }
     }
 
