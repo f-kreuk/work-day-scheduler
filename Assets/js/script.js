@@ -15,6 +15,8 @@ $(function () {
 
   document.querySelector(".btn").addEventListener("click",console.log("Works"));
 
+  
+
   //
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
