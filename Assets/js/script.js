@@ -1,9 +1,5 @@
-
-
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-$(function () {
+//localStorage.clear();
+  
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -11,11 +7,25 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-  
+$("button").click(function() {
+  window.localStorage.setItem('notes',
+    JSON.stringify({hr: $(this).parent().attr('id'), desc: $(this).parent().find("textarea").val()})
+  );
+});
+
+
+$("button").click(function() {
+  console.log($(this).parent().attr('id'));
+  console.log($(this).parent().find("textarea").val())
+});
+
+
+// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
+// the code isn't run until the browser has finished rendering all the elements
+// in the html.
+$(function () {
 
   document.querySelector(".btn").addEventListener("click",console.log("Works"));
-
-  
 
   //
   // TODO: Add code to apply the past, present, or future class to each time
@@ -37,7 +47,7 @@ $(function () {
     function settimeclass() {
       const time = new Date();
       let hours = time.getHours();
-      console.log(hours);
+      //console.log(hours);
       if (hours < 9) {
         hr9.classList.add('future');
         hr10.classList.add('future');
@@ -48,7 +58,7 @@ $(function () {
         hr3.classList.add('future');
         hr4.classList.add('future');
         hr5.classList.add('future');
-        console.log(8);
+        //console.log(8);
       } else if (hours === 9) {
         hr9.classList.add('present');
         hr10.classList.add('future');
@@ -59,7 +69,7 @@ $(function () {
         hr3.classList.add('future');
         hr4.classList.add('future');
         hr5.classList.add('future');
-        console.log(9);
+        //console.log(9);
       } else if (hours === 10) {
         hr9.classList.add('past');
         hr10.classList.add('present');
@@ -70,7 +80,7 @@ $(function () {
         hr3.classList.add('future');
         hr4.classList.add('future');
         hr5.classList.add('future');
-        console.log(10);
+        //console.log(10);
       } else if (hours === 11) {
         hr9.classList.add('past');
         hr10.classList.add('past');
@@ -81,7 +91,7 @@ $(function () {
         hr3.classList.add('future');
         hr4.classList.add('future');
         hr5.classList.add('future');
-        console.log(11);
+        //console.log(11);
       }else if (hours === 12) {
         hr9.classList.add('past');
         hr10.classList.add('past');
@@ -92,7 +102,7 @@ $(function () {
         hr3.classList.add('future');
         hr4.classList.add('future');
         hr5.classList.add('future');
-        console.log(12);
+        //console.log(12);
       }else if (hours === 13) {
         hr9.classList.add('past');
         hr10.classList.add('past');
@@ -103,7 +113,7 @@ $(function () {
         hr3.classList.add('future');
         hr4.classList.add('future');
         hr5.classList.add('future');
-        console.log(13);
+        //console.log(13);
       }else if (hours === 14) {
         hr9.classList.add('past');
         hr10.classList.add('past');
@@ -114,7 +124,7 @@ $(function () {
         hr3.classList.add('future');
         hr4.classList.add('future');
         hr5.classList.add('future');
-        console.log(14);
+        //console.log(14);
       }else if (hours === 15) {
         hr9.classList.add('past');
         hr10.classList.add('past');
@@ -125,7 +135,7 @@ $(function () {
         hr3.classList.add('present');
         hr4.classList.add('future');
         hr5.classList.add('future');
-        console.log(15);
+        //console.log(15);
       }else if (hours === 16) {
         hr9.classList.add('past');
         hr10.classList.add('past');
@@ -136,7 +146,7 @@ $(function () {
         hr3.classList.add('past');
         hr4.classList.add('present');
         hr5.classList.add('future');
-        console.log(16);
+        //console.log(16);
       }else if (hours === 17) {
         hr9.classList.add('past');
         hr10.classList.add('past');
@@ -147,7 +157,7 @@ $(function () {
         hr3.classList.add('past');
         hr4.classList.add('past');
         hr5.classList.add('present');
-        console.log(17);
+        //console.log(17);
       } else {
         hr9.classList.add('past');
         hr10.classList.add('past');
@@ -158,7 +168,7 @@ $(function () {
         hr3.classList.add('past');
         hr4.classList.add('past');
         hr5.classList.add('past');
-        console.log(18);
+        //console.log(18);
       }
     }
 
