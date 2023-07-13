@@ -7,6 +7,7 @@
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
+
 $("button").click(function() {
   window.localStorage.setItem('notes',
     JSON.stringify({hr: $(this).parent().attr('id'), desc: $(this).parent().find("textarea").val()})
@@ -16,8 +17,9 @@ $("button").click(function() {
 
 $("button").click(function() {
   console.log($(this).parent().attr('id'));
-  console.log($(this).parent().find("textarea").val())
+  console.log($(this).parent().find("textarea").val());
 });
+
 
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
