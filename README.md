@@ -5,9 +5,9 @@ This website was created by Florian Kreuk as part of the UCONN Coding Bootcamp m
 
 The following image demonstrates the web application's appearence:
 
-![web application appearance](./assets/images/Work%20Day%20Scheduler.PNG)
+![web application appearance](./Assets/images/Work-Day-Scheduler.PNG)
 
-![web application in action](./assets/images/05-third-party-apis-homework-demo.gif)
+![web application in action](./Assets/images/05-third-party-apis-homework-demo.gif)
 
 The following link takes you to the deployed application: [link](https://f-kreuk.github.io/work-day-scheduler/)
 
