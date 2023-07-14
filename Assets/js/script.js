@@ -8,12 +8,6 @@
   // useful when saving the description in local storage?
 
 
-$("button").click(function() {
-  window.localStorage.setItem('notes',
-    JSON.stringify({hr: $(this).parent().attr('id'), desc: $(this).parent().find("textarea").val()})
-  );
-
-});
 
 $("button").click(function() {
   var hourEl = $(this).parent().attr('id');
@@ -21,10 +15,22 @@ $("button").click(function() {
   localStorage.setItem(hourEl, descEl);
 });
 
-$("button").click(function() {
-  console.log($(this).parent().attr('id'));
-  console.log($(this).parent().find("textarea").val());
-});
+  //
+  // TODO: Add code to get any user input that was saved in localStorage and set
+  // the values of the corresponding textarea elements. HINT: How can the id
+  // attribute of each time-block be used to do this?
+  //
+
+$('#hour-8 .description').val(localStorage.getItem('hour-8'));
+$('#hour-9 .description').val(localStorage.getItem('hour-9'));
+$('#hour-10 .description').val(localStorage.getItem('hour-10'));
+$('#hour-11 .description').val(localStorage.getItem('hour-11'));
+$('#hour-12 .description').val(localStorage.getItem('hour-12'));
+$('#hour-13 .description').val(localStorage.getItem('hour-13'));
+$('#hour-14 .description').val(localStorage.getItem('hour-14'));
+$('#hour-15 .description').val(localStorage.getItem('hour-15'));
+$('#hour-16 .description').val(localStorage.getItem('hour-16'));
+$('#hour-17 .description').val(localStorage.getItem('hour-17'));
 
 
 
@@ -32,8 +38,6 @@ $("button").click(function() {
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-
-  document.querySelector(".btn").addEventListener("click",console.log("Works"));
 
   //
   // TODO: Add code to apply the past, present, or future class to each time
@@ -51,6 +55,8 @@ $(function () {
   const hr3 = document.getElementById('hour-15');
   const hr4 = document.getElementById('hour-16');
   const hr5 = document.getElementById('hour-17');
+
+
 
     function settimeclass() {
       const time = new Date();
@@ -181,14 +187,6 @@ $(function () {
     }
 
 settimeclass();
-
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-
-  
 
   //
   //  TODO: Add code to display the current date in the header of the page.
