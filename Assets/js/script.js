@@ -1,4 +1,4 @@
-// localStorage.clear();
+//localStorage.clear();
   
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -12,8 +12,14 @@ $("button").click(function() {
   window.localStorage.setItem('notes',
     JSON.stringify({hr: $(this).parent().attr('id'), desc: $(this).parent().find("textarea").val()})
   );
+
 });
 
+$("button").click(function() {
+  var hourEl = $(this).parent().attr('id');
+  var descEl = $(this).parent().find("textarea").val();
+  localStorage.setItem(hourEl, descEl);
+});
 
 $("button").click(function() {
   console.log($(this).parent().attr('id'));
@@ -182,7 +188,7 @@ settimeclass();
   // attribute of each time-block be used to do this?
   //
 
-
+  
 
   //
   //  TODO: Add code to display the current date in the header of the page.
