@@ -7,8 +7,6 @@ The following image demonstrates the web application's appearence:
 
 ![web application appearance](./Assets/images/Work-Day-Scheduler.PNG)
 
-![web application in action](./Assets/images/05-third-party-apis-homework-demo.gif)
-
 The following link takes you to the deployed application: [link](https://f-kreuk.github.io/work-day-scheduler/)
 
 ## Installation
